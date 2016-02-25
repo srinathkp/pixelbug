@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/upload','StorageController@index');
+Route::post('/upload','StorageController@storeImage');
