@@ -15,5 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/upload','StorageController@index');
-Route::post('/upload','StorageController@storeImage');
+Route::post('/addmember','API@create');
+Route::get('/addmember','MemberController@create');
