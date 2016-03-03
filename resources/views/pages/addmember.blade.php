@@ -22,7 +22,7 @@
 			</div>
 			<div class="panel-body">
 				
-				<form id="member_form" method="POST">
+				<form id="member_form" method="POST" enctype='multipart/form-data' action="{{action('MemberController@PostCreate')}}">
 
 				  	<div class="form-group">
 				    	<label for="name">Name: </label>
@@ -72,29 +72,6 @@
     		img = event.target.files[0];
     		$("img").fadeIn("fast").attr('src',URL.createObjectURL(event.target.files[0]));
 			//alert(img_url);			
-		});
-
-		$.ajaxSetup({
-  			headers: {
-    		'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-  			}
-		});
-
-		$('#member_form').submit(function(){
-
-			var formData = new FormData($(this)[0]);
-
-	  		$.ajax({
-	  			dataType: "json",
-		        url: "{{action('API@create')}}",
-		        type:"POST",
-		        data: formData,
-		        success:function(data){
-		         
-		        },error:function(){ 
-		            alert("error!");
-		        }
-	    	});
 		});
 	});
 </script>

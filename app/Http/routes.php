@@ -15,5 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/addmember','API@create');
-Route::get('/addmember','MemberController@create');
+Route::post('/addmember','MemberController@PostCreate');
+Route::get('/addmember','MemberController@GetCreate');
