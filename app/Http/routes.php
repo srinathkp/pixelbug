@@ -17,3 +17,13 @@ Route::get('/', function () {
 
 Route::post('/addmember','MemberController@PostCreate');
 Route::get('/addmember','MemberController@GetCreate');
+
+Route::get('/map','MemberController@GetMap');
+Route::get('/storage/app/members/{id}',function($id){
+	$path = storage_path().'/app/members/' . $id.'.jpg';
+	//return $path;
+    
+        return Response::download($path);
+    
+    
+});

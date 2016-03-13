@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Add a member</title>
+	<title>Pixelbug</title>
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -22,7 +22,7 @@
 			</div>
 			<div class="panel-body">
 				
-				<form id="member_form" method="POST" enctype='multipart/form-data' action="{{action('MemberController@PostCreate')}}">
+				<form id="member_form" method="POST" enctype='multipart/form-data'>
 
 				  	<div class="form-group">
 				    	<label for="name">Name: </label>
@@ -73,6 +73,31 @@
     		$("img").fadeIn("fast").attr('src',URL.createObjectURL(event.target.files[0]));
 			//alert(img_url);			
 		});
+
+
+		$.ajaxSetup({
+  			headers: {
+    		'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  			}
+		});
+
+		$('member_form').submit(function(e){
+
+		var postData = $(this).serializeArray();	
+		$.ajax({
+		        url: "{{action('MemberController@PostCreate')}}",
+		        type:"POST",
+		        data: postData,
+		        success:function(data){
+		          	alert(data);
+		        },error:function(){ 
+		            alert("error!");
+		        }
+	    	});
+		$('member_form').submit();
+
+		});
+	  	
 	});
 </script>
 </html>
