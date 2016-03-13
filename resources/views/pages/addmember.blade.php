@@ -90,7 +90,8 @@
 		        data: postData,
 		        success:function(data){
 		          	alert(data);
-		        },error:function(){ 
+		        },
+		        error:function(){ 
 		            alert("error!");
 		        }
 	    	});

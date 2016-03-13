@@ -34,20 +34,31 @@ class MemberController extends Controller
         return redirect('/addmember');
     }
 
-    public function GetMap(){
+    public function PostMap(){
+        $data = [];
         $members = Member::all();
-        //$storagePath  = Storage::disk('local')->getDriver()->getAdapter()->getPathPrefix();
-    	//return $storagePath;
-        foreach ($members as $member) {
-            //$member->profile_url = $storagePath.'members/'.$member->id.'.jpg';
-            //return $member->profile_url;
-            //$member->profile_pic = Response::download($member->profile_url);
-            $location_json = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address='.$member->member_city.','.$member->member_pincode);
-            $location = json_decode($location_json,true);
-            $member->map_url = 'https://maps.googleapis.com/maps/api/staticmap?center='.$location['results'][0]['geometry']['location']['lat'].' '.$location['results'][0]['geometry']['location']['lng'].'&zoom=12&size=400x500&maptype=roadmap&markers=color:blue|'.$location['results'][0]['geometry']['location']['lat'].' '.$location['results'][0]['geometry']['location']['lng'];
+        if($members){
+            
+            foreach ($members as $member) {
+                $location_json = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address='.urlencode($member->member_city).','.urlencode($member->member_pincode));
+                $location = json_decode($location_json,true);
+                $member->map_url = 'https://maps.googleapis.com/maps/api/staticmap?center='.$location['results'][0]['geometry']['location']['lat'].' '.$location['results'][0]['geometry']['location']['lng'].'&zoom=12&size=400x500&maptype=roadmap&markers=color:blue|'.$location['results'][0]['geometry']['location']['lat'].' '.$location['results'][0]['geometry']['location']['lng'];
+            }
+            $data['code'] = 200;
+            $data['status'] = 'success :)';
+            $data['members'] = $members;
+            //return view('pages.mapmember',compact('members'));
         }
-        //return $members;
-        return view('pages.mapmember',compact('members'));
+        else{
+            $data['code'] = 400;
+            $data['status'] = 'No records found :(';
+        }
+
+        return json_encode($data);
+    }
+
+    public function GetMap(){
+        return view('pages.mapmember');
     }
 
 }

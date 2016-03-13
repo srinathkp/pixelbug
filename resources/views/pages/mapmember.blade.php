@@ -11,11 +11,40 @@
 	
 </head>
 <body>
-	<div class="container">
-		@foreach($members as $member)
-			<img src='/storage/app/members/{{$member->id}}'>
-		@endforeach
+	<div class="container" id="main">
 	</div>
 
 </body>
+<script>
+	$(document).ready(function(){
+		
+		$.ajaxSetup({
+  			headers: {
+    		'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  			}
+		});
+
+		$.ajax({
+			url: '{{action("MemberController@PostMap")}}',
+			type: 'POST',
+			data: '',
+			success:function(data){
+			 var json = JSON.parse(data);
+			 var members = json['members'];
+			 $.each(members,function(index,value){
+			 	var id = value['id'];
+			 	var url = '/storage/app/members/'+value['id'];
+			 	document.getElementById('main').innerHTML += '<img src="'+url+'" height="200" width="200"/> <br/>';
+			 });
+			},
+			error:function(){
+				alert('error');
+			}
+
+
+
+		});
+	});
+</script>
+
 </html>
