@@ -57,6 +57,10 @@
   							<div class="col-sm-4"></div>
   						</div>
   					</div>
+  					<div class="form-group">
+					    <label for="description">Description: </label>
+    					 <textarea class="form-control" rows="5" id="comment" name="description"></textarea>
+  					</div>
 				  <button type="submit" class="btn btn-default" id="submitform">Submit</button>
 				</form>
 

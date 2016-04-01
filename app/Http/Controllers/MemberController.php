@@ -26,6 +26,7 @@ class MemberController extends Controller
         $member->member_pincode = $request->pincode;
         $member->member_contact = $request->contact;
         $member->member_email = $request->email;
+        $member->description = $request->description;
         $member->save();
 
         $member_id = Member::latest()->pluck('id'); 
@@ -58,7 +59,7 @@ class MemberController extends Controller
     }
 
     public function GetMap(){
-        return view('pages.mapmember');
+        return view('pages.map_members');
     }
 
 }

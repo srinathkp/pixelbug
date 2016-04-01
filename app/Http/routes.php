@@ -15,13 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+//Member and Map related routes...
 Route::post('/addmember','MemberController@PostCreate');
 Route::get('/addmember','MemberController@GetCreate');
-
 Route::post('/map','MemberController@PostMap');
 Route::get('/map','MemberController@GetMap');
 
-//Function to download the image from storage
+
+
+//Function to download the image from storage...
 Route::get('/storage/app/members/{id}',function($id){
 	$path = storage_path().'/app/members/' . $id.'.jpg';    
     return Response::download($path);
