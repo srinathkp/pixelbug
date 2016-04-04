@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pixelbug</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="js/jquery.flexisel.js"></script>
+  <script type="text/javascript" src="js/flickity.min.js"></script>
+  <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/flickity.css">
+
+	<!--FONTS-->
+	<link href='https://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
+	<!--Style Sheet-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+
+<div class="container-fluid" style="padding:0">
+	<div class="col-md-5 picture-display">
+    
+  </div>
+  <div class="col-md-7 picture-collage">
+    <h2>FESTEMBER</h2>
+    <div class="picture-single">
+      <div class="post-box col-lg-6 col-md-6 col-sm-6">
+        <a href="#"><img class="img-responsive" src="images/festember/1.jpg"></a>
+      </div>
+      <div class="post-box col-lg-6 col-md-6 col-sm-6">
+        <a href="#"><img class="img-responsive" src="images/festember/2.jpg"></a>
+      </div>
+      <div class="post-box col-lg-6 col-md-6 col-sm-6">
+        <a href="#"><img class="img-responsive" src="images/festember/3.jpg"></a>
+      </div>
+      <div class="post-box col-lg-6 col-md-6 col-sm-6">
+        <a href="#"><img class="img-responsive" src="images/festember/4.jpg"></a>
+      </div>
+      <div class="post-box col-lg-6 col-md-6 col-sm-6">
+        <a href="#"><img class="img-responsive" src="images/festember/5.jpg"></a>
+      </div>
+        <div class="post-box col-lg-6 col-md-6 col-sm-6">
+        <a href="#"><img class="img-responsive" src="images/festember/6.jpg"></a>
+      </div>
+        <div class="post-box col-lg-6 col-md-6 col-sm-6">
+        <a href="#"><img class="img-responsive" src="images/festember/7.jpg"></a>
+      </div>
+      <!-- <ul>
+        <li><img src="images/header.jpg"></li>
+        <li><img src="images/header.jpg"></li>
+        <li><img src="images/header.jpg"></li>
+        <li><img src="images/header.jpg"></li>
+        <li><img src="images/header.jpg"></li>
+        <li><img src="images/header.jpg"></li>
+        <li><img src="images/header.jpg"></li>
+        <li><img src="images/header.jpg"></li>
+        <li><img src="images/header.jpg"></li>
+        <li><img src="images/header.jpg"></li>
+        <li><img src="images/header.jpg"></li>
+        <li><img src="images/header.jpg"></li>
+        <li><img src="images/header.jpg"></li>
+        <li><img src="images/header.jpg"></li>
+        <li><img src="images/header.jpg"></li>
+        <li><img src="images/header.jpg"></li>
+        <li><img src="images/header.jpg"></li>
+        <li><img src="images/header.jpg"></li>
+      </ul> -->
+    </div>
+  </div>
+</div>
+<script>
+  $('img').hover(function(){
+    var imgsrc = $(this).attr('src'); 
+    $('.picture-display').css('background-image', 'url(' +  +')');
+    $('.picture-display').delay(1500).css('background-image', 'url(' + imgsrc +')');
+    $('.picture-display').animate({opacity:1},{duration:1500});
+   });
+  // function(){
+  //    $('.picture-display').animate({opacity:0},{duration:1500});
+  //    $('.picture-display').css('background-image', 'url(' +  +')');
+  // });
+</script>
+</body>
+</html>

@@ -62,7 +62,7 @@
 
 <div class="container">
 <div class="the-team">
-	<h2>TEAM</h2>
+	<br/><h2>TEAM</h2>
 	<div id="member-panel">
 		
 	</div>
