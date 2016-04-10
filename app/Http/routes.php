@@ -10,7 +10,31 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
+//DEFAULT
 Route::get('/', function () {
     return view('welcome');
 });
+
+//PHOTOS-API CALL ROUTES
+Route::post('/getalbums_recent','PhotoController@GetRecentAlbumPhotos');
+Route::post('/getalbums_photos/{album_name}','PhotoController@GetAllAlbumPhotos');
+Route::post('/getalbums_photos/',function()
+	{
+		return redirect("/getalbums_recent");
+	});
+
+//PHOTOS-CRUD
+    Route::get('/addphoto','PhotoController@GetAdd' );
+    Route::post('/addphoto','PhotoController@PostAdd' );
+
+    Route::get('/editphoto/{id}','PhotoController@GetEdit' );
+    Route::post('/editphoto/{id}','PhotoController@PostEdit' );
+
+    Route::get('/deletephoto/{id}', 'PhotoController@GetDelete');
+
+    
+    Route::get('/storage/app/photos/{id}',function($id){
+	$path = storage_path().'/app/photos/' . $id.'.jpg';    
+    return Response::download($path);
+    });
+
