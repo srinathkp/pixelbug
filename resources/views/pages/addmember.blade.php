@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Pixelbug</title>
 	<meta charset="utf-8">
@@ -14,6 +15,7 @@
 	}
 	</style>
 </head>
+
 <body>
 	<div class="container" style="padding:5%;">
 		<div class="panel panel-info">
@@ -45,6 +47,18 @@
     					<input type="email" class="form-control" id="email" name="email">
   					</div>
   					<div class="form-group">
+					    <label for="dob">DOB: </label>
+    					<input type="date" class="form-control" id="dob" name="dob">
+  					</div>
+  					<div class="form-group">
+					    <label for="fb">Facebook: </label>
+    					<input type="text" class="form-control" id="fb" name="fb">
+  					</div>
+  					<div class="form-group">
+					    <label for="photolink">Personal photography page: </label>
+    					<input type="text" class="form-control" id="photolink" name="photolink">
+  					</div>
+  					<div class="form-group">
 					    <label for="profile_pic">Profile Picture: </label>
     					<input type="file" class="form-control" id="profile_pic" name="profile_pic">
   					</div>
@@ -53,7 +67,7 @@
 						    <div class="col-sm-4"></div>
 						    <div class="col-sm-3">
 						    	<img src="" id="profilepic" width="200" height="200" style="display:none;" />
-  							</div>
+  							</div>	
   							<div class="col-sm-4"></div>
   						</div>
   					</div>

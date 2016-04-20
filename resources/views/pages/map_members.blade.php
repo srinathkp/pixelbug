@@ -113,18 +113,21 @@
 			 	$('#member-panel').append(
 			 		'<div class="row">\
 				 		<div class="col-md-3">\
-					 		<img src="'+String(url)+'" height="300" width="300">\
-					 	</div>\
-					 	<div class="col-md-4">\
-					 		<img src="'+String(member['map_url'])+'" height="300" width="300">\
+					 		<img src="'+String(url)+'" height="300" width="300" style="border-radius:45%">\
 					 	</div>\
 					 	<div class="col-md-5 about-them">\
 					 		<h3>'+String(member['member_name'])+'</h3>\
+					 		'+String(member['member_dob'])+'\
 					 		<h4>'+String(member['member_email'])+'</h4>\
+					 		<br><a href='+String(member['member_fb'])+'><i class="fa fa-facebook"></i></a>\
+					 		&nbsp;&nbsp;&nbsp;<a href='+String(member["member_photolink"])+'><i class="fa fa-instagram"></i></a>\
 					 		<p style="text-align:center">'+String(member['description'])+'</p>\
 					 	</div>\
+					 	<div class="col-md-4">\
+					 		<img src="'+String(member['map_url'])+'" height="300" width="300" style="border-radius:40%;border:5px solid grey;">\
+					 	</div>\
 					 </div>\
-					<br/>');
+					<br/><hr style="border-width:5px"/>');
 
 			 	console.log(member);
 			 });

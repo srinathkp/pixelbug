@@ -17,11 +17,14 @@ Route::get('/', function () {
 
 
 //Member and Map related routes...
+
+//needs to be under auth middlware
 Route::post('/addmember','MemberController@PostCreate');
 Route::get('/addmember','MemberController@GetCreate');
+Route::get('/editmember','MemberController@GetEdit');
+
 Route::post('/map','MemberController@PostMap');
 Route::get('/map','MemberController@GetMap');
-
 
 
 //Function to download the image from storage...

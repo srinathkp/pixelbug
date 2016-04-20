@@ -26,6 +26,9 @@ class MemberController extends Controller
         $member->member_pincode = $request->pincode;
         $member->member_contact = $request->contact;
         $member->member_email = $request->email;
+        $member->member_dob = $request->dob;
+        $member->member_fb = $request->fb;
+        $member->member_photolink = $request->photolink;
         $member->description = $request->description;
         $member->save();
 
@@ -43,7 +46,7 @@ class MemberController extends Controller
             foreach ($members as $member) {
                 $location_json = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address='.urlencode($member->member_city).','.urlencode($member->member_pincode));
                 $location = json_decode($location_json,true);
-                $member->map_url = 'https://maps.googleapis.com/maps/api/staticmap?center='.$location['results'][0]['geometry']['location']['lat'].' '.$location['results'][0]['geometry']['location']['lng'].'&zoom=12&size=400x500&maptype=roadmap&markers=color:blue|'.$location['results'][0]['geometry']['location']['lat'].' '.$location['results'][0]['geometry']['location']['lng'];
+                $member->map_url = 'https://maps.googleapis.com/maps/api/staticmap?center='.$location['results'][0]['geometry']['location']['lat'].' '.$location['results'][0]['geometry']['location']['lng'].'&zoom=12&size=400x500&maptype=roadmap&markers=color:red|'.$location['results'][0]['geometry']['location']['lat'].' '.$location['results'][0]['geometry']['location']['lng'];
             }
             $data['code'] = 200;
             $data['status'] = 'success :)';
