@@ -11,8 +11,14 @@ class VerifyCsrfToken extends BaseVerifier
      *
      * @var array
      */
-    protected $except = [
-        '/addmember',
- 		'/map',       
-    ];
+
+    protected $except = [ '/addphoto',
+                          '/editphoto/*',
+                          '/deletephoto/*',
+                          '/getalbums_photos/*',
+                          '/getalbums_recent/',
+                          '/addmember',
+                          '/map',
+
+                        ];
 }
