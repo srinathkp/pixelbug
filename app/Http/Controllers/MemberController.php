@@ -62,7 +62,7 @@ class MemberController extends Controller
     }
 
     public function GetMap(){
-        return view('pages.map_members');
+        return view('pages.map');
     }
 
 }

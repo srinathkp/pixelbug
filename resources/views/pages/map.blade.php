@@ -12,7 +12,6 @@
   <script src="js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <script type="text/javascript" src="js/jquery.flexisel.js"></script>
-  <script type="text/javascript" src="js/text-slider.js"></script>
   <script type="text/javascript" src="js/flickity.min.js"></script>
   <link rel="stylesheet" type="text/css" href="css/flickity.css">
 
@@ -22,10 +21,24 @@
 	<link href='https://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
 	<!--Style Sheet-->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+<style>
+	body{
+		background-color: white;
+	}
+
+	footer{
+		background-color:  #232323;
+	}
+
+	.sidebar-nav li a{
+		color: white;
+	}
+</style>
+
 </head>
 <body>
 
-<!-- <nav class="navbar navbar-default" data-spy="affix" data-offset-top="786">
+<!-- <nav class="navbar navbar-default navbar-fixed-top" >
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -76,145 +89,15 @@
             <span class="hamb-middle"></span>
 			<span class="hamb-bottom"></span>
       </button>
-<header>
- 	<div class="container">
- 		<div class="row">
- 			<!-- <img src="images/pixelbug-logo.png">
- --> 			<h3>PIXELBUG</h3>
- 		
- 		</div>
- 	</div>
- </header>
-
-
-
-<section id="who">
- <div class="container">
- 	<div class="row">
- 		<h2>WHO WE ARE</h2>
- 		<div class="col-md-4">
- 			<h3>GENESIS</h3>
- 			<p>We are a student run photography club, established in 2012 and inaugrated bt the eminent film director Gautham Vasudev Menon with an aim to inculcate intrest in and a passion for photography among students.</p>
- 		</div>
- 		<div class="col-md-4">
- 			<h3>TEAM</h3>
- 			<p>Having started out as a hobby group comprising of young and talented photographers, we have grown into a professional club of over 25 active members yearning to learn through every opportunity put forth to us.</p>
- 		</div>
- 		<div class="col-md-4">
- 			<h3>EXPERIENCE</h3>
- 			<p>Over the years, we have trained ourselves through every chance that came by. We have tajen to the streets for many photowalks, promoted tourism across South India. In addition to this, we also carried out various studio shoots.</p>
- 		</div> 		
- 	</div>
- </div>
-</section>
-
-<section id="what">
-	<div class="container-fluid">
-		<h2>WHAT WE DO</h2>
-		<div class="col-md-4 sample" id="products">
-			<h3>PRODUCT</h3>
-			
-		</div>
-		<div class="col-md-4 sample" id="studio">
-			<h3>STUDIO</h3>
-			
-		</div>
-		<div class="col-md-4 sample" id="wedding">
-			<h3>WEDDING</h3>
-			
-		</div>
-		<div  id="event" class="col-md-4 sample">
-			<h3>EVENT COVERAGE</h3>
-			
-		</div>
-		<div class="col-md-4 sample" id="workshop">
-			<h3>WORKSHOP</h3>
-			
-		</div>
-		<div class="col-md-4 sample" id="landscape">
-			<h3>LANDSCAPE</h3>
-			
-		</div>
+<div class="container">
+<div class="the-team">
+	<br/><h2>TEAM</h2>
+	<div id="member-panel">
+		
 	</div>
-</section>
+</div>
+</div>
 
-<section id="gallery">
-	<h2>GALLERY</h2>
-	<p>A glimpse of our work</p>
-	    <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
-		  <div class="gallery-cell" id="festember"><h3>FESTEMBER</h3><button class="photo">VIEW PHOTOS</button></div>
-		  <div class="gallery-cell" id="pragyan"><h3>PRAGYAN</h3><button class="photo">VIEW PHOTOS</button></div>
-		  <div class="gallery-cell" id="nittfest"><h3>NITTFEST</h3><button class="photo">VIEW PHOTOS</button></div>
-		  <div class="gallery-cell" id="sportsfete"><h3>SPORTSFETE</h3><button class="photo">VIEW PHOTOS</button></div>
-		  <div class="gallery-cell"></div>
-		</div>
-		<button class="full-gallery">VIEW FULL GALLERY</button>
-
-</section>
-
-<section id="team">
-	<div class="container">
-		<h2>MEET THE TEAM</h2>
-		<div class="col-md-4">
-			<div class="team-pic"></div>
-			<h3>JOHN DOE</h3>
-		</div>
-		<div class="col-md-4">
-			<div class="team-pic"></div>
-			<h3>JANET DOE</h3>
-		</div>
-		<div class="col-md-4">
-			<div class="team-pic"></div>
-			<h3>JANE DOE</h3>
-		</div>
-		<button>VIEW ALL MEMBERS</button>
-	</div>
-</section>
-
-<section id="testimonial">
-	<div class="container">
-		<h2>TESTIMONIALS</h2>
-		<div class="slide">
-			<div class="slider-item quote">
-			<h3 class="paragraph">
-				Pixelbug is a club of like-minded, dedicated and a high caliber group of photographers. The club has helped me in boosting my self confidence and skills to a whole new level. At Pixelbug, you are always a learner, and you get to be a part of a club where the members are open minded, helpful and always ready to share ideas. Being a part of this club is a major memory of my journey at NITT.
-
-			</h3>
-			<p class="white">
-				Shyam Purushan.	
-			</p>
-			</div>
-			<div class="slider-item quote">
-			<h3 class="paragraph">
-				It was a great experience starting the club from it's seed. Sowed the seeds along with Pranav and it has reached great heights now.
-
-			</h3>
-			<p class="white">
-				Palaniappan.
-			</p>
-			</div>
-
-		<script>
-			$('.slide').textSlider({
-
-			timeout: 5000,
-			slideTime: 750,
-			loop: 1
-
-			});
-
-		</script>
-		</div>
-	</div>
-</section>
-
-<section id="contact">
-	<div class="container">
-	<h2>WANT TO TALK TO US?</h2>
-	<h3>Have any queries or want to work with us? Say hi to us at this address!</h3>
-	<button>pixelbug@gmail.com</button>
-	</div>
-</section>
 
 <footer>
 	<div class="container">
@@ -233,6 +116,7 @@
 			</div>
 	</div>
 </footer>
+
 
 </div>
 </div>
@@ -266,6 +150,62 @@
         $('#wrapper').toggleClass('toggled');
   });  
 });
+</script>
+
+
+<!---AJAX for members-->
+
+<script>
+		$(document).ready(function(){
+		
+		$.ajaxSetup({
+  			headers: {
+    		'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  			}
+		});
+
+		$.ajax({
+			url: '{{action("MemberController@PostMap")}}',
+			type: 'POST',
+			data: '',
+			success:function(data){
+			 var json = JSON.parse(data);
+			 var members = json['members'];
+			 $.each(members,function(index,member){
+			 	var url = '/storage/app/members/'+member['id'];
+			 	/*var id = value['id'];
+			 	document.getElementById('main').innerHTML += '<img src="'+url+'" height="200" width="200"/> <br/>';*/
+			 	 
+			 	$('#member-panel').append(
+			 		'<div class="row">\
+				 		<div class="col-md-3">\
+					 		<img src="'+String(url)+'" height="300" width="300" style="border-radius:45%">\
+					 	</div>\
+					 	<div class="col-md-5 about-them">\
+					 		<h3>'+String(member['member_name'])+'</h3>\
+					 		'+String(member['member_dob'])+'\
+					 		<h4>'+String(member['member_email'])+'</h4>\
+					 		<br><a href='+String(member['member_fb'])+'><i class="fa fa-facebook"></i></a>\
+					 		&nbsp;&nbsp;&nbsp;<a href='+String(member["member_photolink"])+'><i class="fa fa-instagram"></i></a>\
+					 		<p style="text-align:center">'+String(member['description'])+'</p>\
+					 	</div>\
+					 	<div class="col-md-4">\
+					 		<img src="'+String(member['map_url'])+'" height="300" width="300" style="border-radius:40%;border:5px solid grey;">\
+					 	</div>\
+					 </div>\
+					<br/><hr style="border-width:5px"/>');
+
+			 	console.log(member);
+			 });
+			},
+			error:function(){
+				alert('error');
+			}
+
+
+
+		});
+	});
 </script>
 
 
