@@ -23,6 +23,8 @@ Route::get('/', function () {
 Route::post('/addmember','MemberController@PostCreate');
 Route::get('/addmember','MemberController@GetCreate');
 Route::get('/editmember','MemberController@GetEdit');
+Route::get('/editmember/{id}','MemberController@GetMemberEdit');
+Route::post('/editmember/{id}','MemberController@PostMemberEdit');
 
 Route::post('/map','MemberController@PostMap');
 Route::get('/map','MemberController@GetMap');

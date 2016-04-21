@@ -65,4 +65,31 @@ class MemberController extends Controller
         return view('pages.map');
     }
 
+    public function GetEdit(){
+        return view('pages.editmap');
+    }
+
+    public function GetMemberEdit($id){
+        $member = Member::where('id',$id)->first();
+        return view('pages.editmember',compact('member'));   
+    }
+
+    public function PostMemberEdit($id,Request $request){
+        $file = $request->file('profile_pic');
+        Member::where('id',$id)
+              ->update([
+                        'member_name' => $request->name,
+                        'member_city' => $request->city,
+                        'member_pincode' => $request->pincode,
+                        'member_contact' => $request->contact,
+                        'member_email' => $request->email,
+                        'member_dob' => $request->dob,
+                        'member_fb' => $request->fb,
+                        'member_photolink' => $request->photolink,
+                        'description' => $request->description,
+                        ]);
+        Storage::disk('local')->delete('members/'.$id.'.jpg');      
+        Storage::disk('local')->put('members/'.$id.'.jpg', File::get($file));
+        return redirect('/editmember');
+    }
 }

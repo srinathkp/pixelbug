@@ -19,6 +19,6 @@ class VerifyCsrfToken extends BaseVerifier
                           '/getalbums_recent/',
                           '/addmember',
                           '/map',
-
+                          '/edit/*',
                         ];
 }
