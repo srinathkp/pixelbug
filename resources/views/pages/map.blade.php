@@ -38,30 +38,19 @@
 </head>
 <body>
 
-<!-- <nav class="navbar navbar-default navbar-fixed-top" >
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#"><img src="images/pixelbug-logo.png" width="75"></a>
-    </div> 
+<div id="loading">
+<div id="loading-center">
+<div id="loading-center-absolute">
+<div class="object" id="object_four"></div>
+<div class="object" id="object_three"></div>
+<div class="object" id="object_two"></div>
+<div class="object" id="object_one"></div>
+
+</div>
+</div>
  
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#us">Home<span class="sr-only">(current)</span></a></li>
-        <li><a href="#who">About us</a></li>
-      	<li><a href="#what">Work</a></li>
-      	<li><a href="#gallery">Gallery</a></li>
-      	<li><a href="#testimonial">Testimonials</a></li>
-      	<li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav> -->
+</div>
+
 
 <div id="wrapper">
  <div class="overlay"></div>
@@ -156,7 +145,7 @@
 <!---AJAX for members-->
 
 <script>
-		$(document).ready(function(){
+		$(window).load(function(){
 		
 		$.ajaxSetup({
   			headers: {
@@ -169,6 +158,7 @@
 			type: 'POST',
 			data: '',
 			success:function(data){
+			 $("#loading").fadeOut(500);
 			 var json = JSON.parse(data);
 			 var members = json['members'];
 			 $.each(members,function(index,member){
@@ -179,9 +169,9 @@
 			 	$('#member-panel').append(
 			 		'<div class="row">\
 				 		<div class="col-md-3">\
-					 		<img src="'+String(url)+'" height="300" width="300" style="border-radius:45%">\
+					 		<img src="'+String(url)+'">\
 					 	</div>\
-					 	<div class="col-md-5 about-them">\
+					 	<div class="col-md-6 about-them">\
 					 		<h3>'+String(member['member_name'])+'</h3>\
 					 		'+String(member['member_dob'])+'\
 					 		<h4>'+String(member['member_email'])+'</h4>\
@@ -189,8 +179,8 @@
 					 		&nbsp;&nbsp;&nbsp;<a href='+String(member["member_photolink"])+'><i class="fa fa-instagram"></i></a>\
 					 		<p style="text-align:center">'+String(member['description'])+'</p>\
 					 	</div>\
-					 	<div class="col-md-4">\
-					 		<img src="'+String(member['map_url'])+'" height="300" width="300" style="border-radius:40%;border:5px solid grey;">\
+					 	<div class="col-md-3">\
+					 		<img src="'+String(member['map_url'])+'" height="200" width="200" style="border-radius:50%;border:2px solid grey;">\
 					 	</div>\
 					 </div>\
 					<br/><hr style="border-width:5px"/>');

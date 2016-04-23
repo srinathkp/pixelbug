@@ -31,12 +31,8 @@
  				    	<input type="text" class="form-control" id="name" name="name">
   				  	</div>
   					<div class="form-group">
-					    <label for="city">City: </label>
-    					<input type="text" class="form-control" id="city" name="city">
-  					</div>
-  					<div class="form-group">
-					    <label for="pincode">Pincode: </label>
-    					<input type="number" class="form-control" id="pincode" name="pincode">
+					    <label for="address">Address: </label>
+    					<input type="text" class="form-control" id="address" name="address">
   					</div>
   					<div class="form-group">
 					    <label for="contact">Contact: </label>
@@ -66,7 +62,7 @@
   						<div class="row">
 						    <div class="col-sm-4"></div>
 						    <div class="col-sm-3">
-						    	<img src="" id="profilepic" width="200" height="200" style="display:none;" />
+						    	<img src="" id="profilepic" width="200" height="200" style="display:none; border-radius: 50%;" />
   							</div>	
   							<div class="col-sm-4"></div>
   						</div>

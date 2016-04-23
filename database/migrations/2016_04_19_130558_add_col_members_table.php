@@ -13,9 +13,9 @@ class AddColMembersTable extends Migration
     public function up()
     {
         Schema::table('members', function (Blueprint $table) {
-            $table->string('member_dob');
-            $table->string('member_fb');
-            $table->string('member_photolink');
+            $table->string('member_dob')->nullable();
+            $table->string('member_fb')->nullable();
+            $table->string('member_photolink')->nullable();
         });
     }
 

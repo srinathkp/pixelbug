@@ -17,6 +17,7 @@
 </head>
 
 <body>
+
 	<div class="container" style="padding:5%;">
 		<div class="panel panel-info">
 			<div class="panel-heading">
@@ -31,12 +32,8 @@
  				    	<input type="text" class="form-control" id="name" name="name" value="{{$member->member_name}}">
   				  	</div>
   					<div class="form-group">
-					    <label for="city">City: </label>
-    					<input type="text" class="form-control" id="city" name="city" value="{{$member->member_city}}">
-  					</div>
-  					<div class="form-group">
-					    <label for="pincode">Pincode: </label>
-    					<input type="number" class="form-control" id="pincode" name="pincode" value="{{$member->member_pincode}}">
+					    <label for="address">Address: </label>
+    					<input type="text" class="form-control" id="address" name="address" value="{{$member->member_address}}">
   					</div>
   					<div class="form-group">
 					    <label for="contact">Contact: </label>

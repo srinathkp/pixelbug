@@ -38,6 +38,21 @@
 </head>
 <body>
 
+<div id="loading">
+<div id="loading-center">
+<div id="loading-center-absolute">
+<div class="object" id="object_four"></div>
+<div class="object" id="object_three"></div>
+<div class="object" id="object_two"></div>
+<div class="object" id="object_one"></div>
+
+</div>
+</div>
+ 
+</div>
+
+
+
 <!-- <nav class="navbar navbar-default navbar-fixed-top" >
   <div class="container-fluid">
     <div class="navbar-header">
@@ -156,7 +171,7 @@
 <!---AJAX for members-->
 
 <script>
-		$(document).ready(function(){
+		$(window).load(function(){
 		
 		$.ajaxSetup({
   			headers: {
@@ -169,6 +184,7 @@
 			type: 'POST',
 			data: '',
 			success:function(data){
+			$("#loading").fadeOut(500);
 			 var json = JSON.parse(data);
 			 var members = json['members'];
 			 $.each(members,function(index,member){
