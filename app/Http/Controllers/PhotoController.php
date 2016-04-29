@@ -146,7 +146,7 @@ if($albums)
 foreach ($albums as $album) 
 {
 
-      $data['album'][$album]=Photo::getalbums_all($album)->take(3)->all();
+      $data['album'][$count]=Photo::getalbums_all($album)->take(1)->all();
       $count++;
 
 }
@@ -161,6 +161,20 @@ echo json_encode($data);
 
     }
 
+public function AllAlbumPhotos($album_name)
+{
+      $photocount=Photo::getalbums_all($album_name)->count();
+
+return view("pages.getalbums_photos")->with('album_name',$album_name)->with('count',$photocount);
+
+}
+
+public function RecentAlbumPhotos()
+{
+
+return view("pages.getalbums_recent");
+
+}
 
 
 

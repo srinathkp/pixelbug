@@ -10,7 +10,7 @@
 	<meta name="csrf-token" value="{{ csrf_token() }}">
 	<style>
 	#photo{
-		border-radius: 20%;
+		border-radius: 0%;
 	}
 	</style>
 </head>

@@ -16,8 +16,15 @@ Route::get('/', function () {
 });
 
 //PHOTOS-API CALL ROUTES
+
+Route::get('/getalbums_recent','PhotoController@RecentAlbumPhotos');
+
 Route::post('/getalbums_recent','PhotoController@GetRecentAlbumPhotos');
+
+Route::get('/getalbums_photos/{album_name}','PhotoController@AllAlbumPhotos');
+
 Route::post('/getalbums_photos/{album_name}','PhotoController@GetAllAlbumPhotos');
+
 Route::post('/getalbums_photos/',function()
 	{
 		return redirect("/getalbums_recent");
@@ -33,7 +40,7 @@ Route::post('/getalbums_photos/',function()
     Route::get('/deletephoto/{id}', 'PhotoController@GetDelete');
 
     
-    Route::get('/storage/app/photos/{id}',function($id){
+    Route::get('/storage/app/photos/{id}.jpg',function($id){
 	$path = storage_path().'/app/photos/' . $id.'.jpg';    
     return Response::download($path);
     });
