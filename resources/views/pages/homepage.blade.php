@@ -62,11 +62,16 @@
                     <a href="index.html">ABOUT US</a>
                 </li> -->
                 <li>
-                    <a href="gallery.html">GALLERY</a>
+                    <a href="{{action('PhotoController@RecentAlbumPhotos')}}">GALLERY</a>
                 </li>
                 <li>
                     <a href="{{action('MemberController@GetMap')}}">TEAM</a>
                 </li>
+                @if(Auth::check())
+	                <li>
+	                    <a href="{{action('Auth\AuthController@getLogout')}}">LOGOUT</a>
+	                </li>
+                @endif
             </ul>
         </nav>
         <!-- /#sidebar-wrapper -->

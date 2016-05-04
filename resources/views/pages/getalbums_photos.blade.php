@@ -158,8 +158,7 @@ $.ajaxSetup({
         @for($i=0;$i<$count;$i++)
        <img src="" width=400 data-fullsrc="" id={{$i}}>
         @endfor
-        <img src='/storage/app/photos/3.jpg' width=400 data-fullsrc='/storage/app/photos/3.jpg'>
-        </div>
+               </div>
                          
        
 
