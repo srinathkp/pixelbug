@@ -58,17 +58,16 @@
         <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
             <ul class="nav sidebar-nav">
                 <li>
-                    <a href="index.html">HOME</a>
-                </li><!-- 
-                 <li>
-                    <a href="index.html">ABOUT US</a>
-                </li> -->
+                    <a href="{{action('PagesController@index')}}">HOME</a>
+                </li>
                 <li>
                     <a href="gallery.html">GALLERY</a>
                 </li>
+            <!--    
                 <li>
                     <a href="map-index.html">TEAM</a>
                 </li>
+            -->
             </ul>
         </nav>
         <!-- /#sidebar-wrapper -->

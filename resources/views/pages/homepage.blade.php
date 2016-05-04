@@ -65,7 +65,7 @@
                     <a href="gallery.html">GALLERY</a>
                 </li>
                 <li>
-                    <a href="map-index.html">TEAM</a>
+                    <a href="{{action('MemberController@GetMap')}}">TEAM</a>
                 </li>
             </ul>
         </nav>

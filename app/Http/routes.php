@@ -10,11 +10,9 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-//DEFAULT
-Route::get('/', function () {
-    return view('welcome');
-});
 
+//DEFAULT
+Route::get('/','PagesController@index');
 
 
 //Member and Map related routes...
