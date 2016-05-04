@@ -142,6 +142,11 @@ $.ajaxSetup({
                 <li>
                     <a href="map-index.html">TEAM</a>
                 </li>
+                @if(Auth::check())
+                  <li>
+                      <a href="{{action('Auth\AuthController@getLogout')}}">LOGOUT</a>
+                  </li>
+                @endif
             </ul>
         </nav>
         <!-- /#sidebar-wrapper -->
@@ -155,9 +160,17 @@ $.ajaxSetup({
       <h2>{{$album_name}}</h2>
         
         <div id="gal1">
-        @for($i=0;$i<$count;$i++)
-       <img src="" width=400 data-fullsrc="" id={{$i}}>
-        @endfor
+        @if(!Auth::check())  
+          @for($i=0;$i<$count;$i++)
+          <img src="" width=400 data-fullsrc="" id={{$i}}>
+          @endfor
+        @else
+          @for($i=0;$i<$count;$i++)
+          <a href="/editphoto/{{$photoid[$i]}}">
+            <img src="" width=400 id={{$i}}>
+          </a>
+          @endfor
+        @endif
                </div>
                          
        

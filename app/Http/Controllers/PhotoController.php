@@ -79,10 +79,12 @@ $photo->save();
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function GetDelete()
-    {
-                    
-        return view('pages.delete');
+    public function GetDelete($id)
+    {   //return 1;
+        Storage::delete('photos/'.$id.'.jpg');            
+        $photo = Photo::find($id);
+        $photo->delete();
+        return redirect('/getalbums_recent');
     
     }
 
@@ -123,8 +125,11 @@ echo json_encode($data);
 public function AllAlbumPhotos($album_name)
 {
       $photocount=Photo::getalbums_all($album_name)->count();
+      $photoid=Photo::getalbums_all($album_name)->lists('id');
 
-return view("pages.getalbums_photos")->with('album_name',$album_name)->with('count',$photocount);
+return view("pages.getalbums_photos")->with('album_name',$album_name)
+                                     ->with('count',$photocount)
+                                     ->with('photoid',$photoid);
 
 }
 

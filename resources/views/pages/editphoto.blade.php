@@ -4,7 +4,7 @@
 	<title>Pixelbug</title>
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://bootswatch.com/superhero/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<meta name="csrf-token" value="{{ csrf_token() }}">
@@ -37,17 +37,21 @@
   						<div class="row">
 						    <div class="col-sm-4"></div>
 						    <div class="col-sm-3">
-						    	<img id="photo" width="200" height="200" src="/storage/app/photos/{{$photo->id}}" />
+						    	<img id="photo" width="200" height="200" src="/storage/app/photos/{{$photo->id}}.jpg" />
   							</div>
   							<div class="col-sm-4"></div>
   						</div>
   					</div>
   					
-  									  <button type="submit" class="btn btn-default" id="submitform">Submit</button>
+  				 <button type="submit" class="btn btn-default" id="submitform">Edit</button>
 				</form>
 
+				
 			</div>
 		</div>
+  				 <a href={{action('PhotoController@GetDelete',['id'=>$photo->id])}}>
+  				 	<button type="submit" class="btn btn-default" id="submitform">Delete</button>
+				</a>
 	</div>
 </body>
 

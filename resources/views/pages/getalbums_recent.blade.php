@@ -92,6 +92,11 @@
                 <li>
                     <a href="/map-index.html">TEAM</a>
                 </li>
+                @if(Auth::check())
+                  <li>
+                      <a href="{{action('Auth\AuthController@getLogout')}}">LOGOUT</a>
+                  </li>
+                @endif
             </ul>
         </nav>
         <!-- /#sidebar-wrapper -->

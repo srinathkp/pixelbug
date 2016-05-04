@@ -63,6 +63,11 @@
                 <li>
                     <a href="gallery.html">GALLERY</a>
                 </li>
+                @if(Auth::check())
+	                <li>
+	                    <a href="{{action('Auth\AuthController@getLogout')}}">LOGOUT</a>
+	                </li>
+                @endif
             <!--    
                 <li>
                     <a href="map-index.html">TEAM</a>
@@ -168,7 +173,7 @@
 			 	$('#member-panel').append(
 			 		'<div class="row">\
 				 		<div class="col-md-3">\
-					 		<img src="'+String(url)+'">\
+					 		<img src="'+String(url)+'" height="200" width="200" style="border-radius:50%;border:2px solid grey;">\
 					 	</div>\
 					 	<div class="col-md-6 about-them">\
 					 		<h3>'+String(member['member_name'])+'</h3>\
