@@ -148,7 +148,7 @@
 		  <div class="gallery-cell" id="sportsfete"><h3>SPORTSFETE</h3><button class="photo">VIEW PHOTOS</button></div>
 		  <div class="gallery-cell"></div>
 		</div>
-		<button class="full-gallery">VIEW FULL GALLERY</button>
+		<a href="{{action('PhotoController@GetRecentAlbumPhotos')}}"><button class="full-gallery">VIEW FULL GALLERY</button></a>
 
 </section>
 
@@ -167,7 +167,9 @@
 			<div class="team-pic"></div>
 			<h3>JANE DOE</h3>
 		</div>
-		<button>VIEW ALL MEMBERS</button>
+	<a href="{{action('MemberController@GetMap')}}">
+			<button>VIEW ALL MEMBERS</button>
+	</a>
 	</div>
 </section>
 

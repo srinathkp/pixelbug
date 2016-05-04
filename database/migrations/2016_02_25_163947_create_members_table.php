@@ -17,7 +17,7 @@ class CreateMembersTable extends Migration
             $table->string('member_name')->nullable();
             $table->string('member_address')->nullable();
             $table->string('member_contact')->nullable();
-            $table->string('member_email')->unique();
+            $table->string('member_email')->nullable();
             $table->timestamps();
         });
     }

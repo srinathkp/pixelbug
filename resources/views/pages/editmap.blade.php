@@ -95,6 +95,9 @@
                 <li>
                     <a href="map-index.html">TEAM</a>
                 </li>
+                <li>
+                    <a href='#'>LOGOUT</a>
+                </li>
             </ul>
         </nav>
         <!-- /#sidebar-wrapper -->

@@ -4,7 +4,6 @@ body{
 }
 
 
-
 #loading{
 	background-color: #232323;
 	height: 100%;
@@ -110,6 +109,11 @@ body{
 
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> b6845f6c457181c86d329fb455ad004c259d5700
 header{
 	background-size: cover;
 	background-image: url("header.jpg");
@@ -629,12 +633,15 @@ footer{
 	font-family: "Montserrat",sans-serif;
 }
 
+<<<<<<< HEAD
 .the-team img{
 	border-radius:50%;
 	width: 200px;
 	height: 200px;
 }
 
+=======
+>>>>>>> b6845f6c457181c86d329fb455ad004c259d5700
 .the-team h2{
 	margin-top: 0px;
 	padding-top: 55px;
@@ -665,7 +672,11 @@ footer{
 }
 
 .about-them h3{
+<<<<<<< HEAD
 	text-align: center;
+=======
+	text-align: left;
+>>>>>>> b6845f6c457181c86d329fb455ad004c259d5700
 }
 
 .the-team > .row{

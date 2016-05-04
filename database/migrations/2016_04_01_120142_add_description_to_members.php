@@ -13,7 +13,7 @@ class AddDescriptionToMembers extends Migration
     public function up()
     {
         Schema::table('members', function (Blueprint $table) {
-            $table->string('member_description')->nullable();
+            $table->string('member_description',1000)->nullable();
         });
     }
 
