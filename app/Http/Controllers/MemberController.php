@@ -81,6 +81,7 @@ class MemberController extends Controller
     }
 
     public function PostMemberEdit($id,Request $request){
+        //return $request->file('profile_pic');
         $file = $request->file('profile_pic');
         Member::where('id',$id)
               ->update([
