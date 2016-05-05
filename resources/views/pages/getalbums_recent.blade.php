@@ -27,6 +27,10 @@
 		margin-bottom: 85px;
 	}
 
+  body{
+    background-color: white;
+  }
+
 	#gallery h2{
 		padding-top: 55px;
 		padding-bottom: 40px;
@@ -81,18 +85,27 @@
         <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
             <ul class="nav sidebar-nav">
                 <li>
-                    <a href="/../index.html">HOME</a>
+                    <a href="{{action('PagesController@index')}}">HOME</a>
                 </li><!-- 
                  <li>
                     <a href="index.html">ABOUT US</a>
                 </li> -->
                 <li>
-                    <a href="/gallery.html">GALLERY</a>
+                    <a href="{{action('PhotoController@RecentAlbumPhotos')}}">GALLERY</a>
                 </li>
                 <li>
-                    <a href="/map-index.html">TEAM</a>
+                    <a href="{{action('MemberController@GetMap')}}">TEAM</a>
                 </li>
-                @if(Auth::check())
+                 @if(Auth::check())
+                  <li>
+                      <a href="{{action('PhotoController@GetAdd')}}">ADD PHOTOS</a>
+                    </li>
+                    <li>
+                      <a href="{{action('MemberController@GetCreate')}}">ADD MEMBER</a>
+                    </li>
+                  <li>
+                      <a href="{{action('MemberController@GetEdit')}}">EDIT TEAM</a>
+                    </li>
                   <li>
                       <a href="{{action('Auth\AuthController@getLogout')}}">LOGOUT</a>
                   </li>
@@ -208,7 +221,7 @@ $.ajaxSetup({
         /*var id = value['id'];
         document.getElementById('main').innerHTML += '<img src="'+url+'" height="200" width="200"/> <br/>';*/
          
-  $('#gallery .container').append('<div class="col-md-4" style="background-size:contain;background-repeat: no-repeat;background-position:center;" id='+photo[0]['album']+'><h3>'+photo[0]['album']+'</h3><a href="/getalbums_photos/'+photo[0]['album']+'"><button class="photo">VIEW PHOTOS</button></a></div>');
+  $('#gallery .container').append('<div class="col-md-4" style="background-size:cover;background-repeat: no-repeat;background-position:center;" id='+photo[0]['album']+'><h3>'+photo[0]['album']+'</h3><a href="/getalbums_photos/'+photo[0]['album']+'"><button class="photo">VIEW PHOTOS</button></a></div>');
   $('#'+photo[0]['album']).css("background-image", "url("+url+")"); 
        // $("#"+count).attr('src', String(url));
        // $("#"+count).attr('data-fullsrc', String(url));
@@ -225,10 +238,6 @@ $.ajaxSetup({
 
 
     });
-
-
-
-
 
 });
 </script>

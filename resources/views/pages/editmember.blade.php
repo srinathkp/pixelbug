@@ -78,6 +78,9 @@
 				</form>
 
 			</div>
+			<a href="{{action('MemberController@GetMemberEdit',['id'=>$next_id])}}">
+			<button>Next Member</button>
+			</a>
 		</div>
 	</div>
 </body>

@@ -109,11 +109,6 @@ body{
 
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> b6845f6c457181c86d329fb455ad004c259d5700
 header{
 	background-size: cover;
 	background-image: url("header.jpg");
@@ -583,7 +578,9 @@ section{
 footer{
 	padding: 5%;
 	padding-top: 8%;
+	margin-top: 10%;
 	padding-bottom: 8%;
+	background-color:#232323; 
 }
 
 
@@ -995,7 +992,7 @@ html { height: 100%;}
 	position: relative;
 }
 .overlay{
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	bottom: 0;

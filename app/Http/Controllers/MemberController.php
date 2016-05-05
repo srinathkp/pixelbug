@@ -44,11 +44,14 @@ class MemberController extends Controller
         if($members){
             
             foreach ($members as $member) {
-                
+                if(!($member->member_dplink)){
                 $location_json = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address='.urlencode($member->member_address));
                 //return $location_json;
                 $location = json_decode($location_json,true);
                 $member->map_url = 'https://maps.googleapis.com/maps/api/staticmap?center='.$location['results'][0]['geometry']['location']['lat'].' '.$location['results'][0]['geometry']['location']['lng'].'&zoom=12&size=400x500&maptype=roadmap&markers=color:red|'.$location['results'][0]['geometry']['location']['lat'].' '.$location['results'][0]['geometry']['location']['lng'];
+                    Member::where('id',$member->id)->update(['member_dplink'=>$member->map_url]);
+                }
+                else $member->map_url = $member->member_dplink;
             }
             $data['code'] = 200;
             $data['status'] = 'success :)';
@@ -73,7 +76,8 @@ class MemberController extends Controller
 
     public function GetMemberEdit($id){
         $member = Member::where('id',$id)->first();
-        return view('pages.editmember',compact('member'));   
+        $next_id = $member->id+1; 
+        return view('pages.editmember',compact('member'))->with(['next_id'=>$next_id]);   
     }
 
     public function PostMemberEdit($id,Request $request){

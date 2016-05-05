@@ -84,21 +84,30 @@
         <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
             <ul class="nav sidebar-nav">
                 <li>
-                    <a href="index.html">HOME</a>
+                    <a href="{{action('PagesController@index')}}">HOME</a>
                 </li><!-- 
                  <li>
                     <a href="index.html">ABOUT US</a>
                 </li> -->
                 <li>
-                    <a href="gallery.html">GALLERY</a>
+                    <a href="{{action('PhotoController@RecentAlbumPhotos')}}">EDIT GALLERY</a>
                 </li>
-                <li>
-                    <a href="map-index.html">TEAM</a>
-                </li>
-                <li>
-                    <a href='#'>LOGOUT</a>
-                </li>
-            </ul>
+                 @if(Auth::check())
+                	<li>
+                      <a href="{{action('PhotoController@GetAdd')}}">ADD PHOTOS</a>
+                  	</li>
+                  	<li>
+                      <a href="{{action('MemberController@GetCreate')}}">ADD MEMBER</a>
+                  	</li>
+
+                	<li>
+                      <a href="{{action('MemberController@GetEdit')}}">EDIT TEAM</a>
+                  	</li>
+	                <li>
+	                    <a href="{{action('Auth\AuthController@getLogout')}}">LOGOUT</a>
+	                </li>
+                @endif            
+             </ul>
         </nav>
         <!-- /#sidebar-wrapper -->
 <div id="page-content-wrapper">
@@ -199,7 +208,7 @@
 			 	$('#member-panel').append(
 			 		'<div class="row">\
 					 		<div class="col-md-3">\
-						 		<img src="'+String(url)+'" height="300" width="300" style="border-radius:45%">\
+						 		<img src="'+String(url)+'" height="200" width="200" style="border-radius:50%;border:2px solid grey;">\
 						 	</div>\
 						 	<div class="col-md-5 about-them">\
 						 		<h3>'+String(member['member_name'])+'</h3>\
@@ -207,11 +216,11 @@
 						 		<h4>'+String(member['member_email'])+'</h4>\
 						 		<br><a href='+String(member['member_fb'])+'><i class="fa fa-facebook"></i></a>\
 						 		&nbsp;&nbsp;&nbsp;<a href='+String(member["member_photolink"])+'><i class="fa fa-instagram"></i></a>\
-						 		<p style="text-align:center">'+String(member['description'])+'</p>\
+						 		<p style="text-align:center">'+String(member['member_description'])+'</p>\
 					 	  <a href="'+String(member_url)+'"><button class="full-gallery">EDIT</button></a>\
 						 	</div>\
 						 	<div class="col-md-4">\
-						 		<img src="'+String(member['map_url'])+'" height="300" width="300" style="border-radius:40%;border:5px solid grey;">\
+						 		<img src="'+String(member['map_url'])+'" height="200" width="200" style="border-radius:50%;border:2px solid grey;">\
 						 	</div>\
 						 </div>\
 					<br/><hr style="border-width:5px"/>');

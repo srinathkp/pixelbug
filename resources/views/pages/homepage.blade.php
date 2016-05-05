@@ -56,7 +56,7 @@
         <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
             <ul class="nav sidebar-nav">
                 <li>
-                    <a href="index.html">HOME</a>
+                    <a href="">HOME</a>
                 </li><!-- 
                  <li>
                     <a href="index.html">ABOUT US</a>
@@ -68,6 +68,15 @@
                     <a href="{{action('MemberController@GetMap')}}">TEAM</a>
                 </li>
                 @if(Auth::check())
+                	<li>
+                      <a href="{{action('PhotoController@GetAdd')}}">ADD PHOTOS</a>
+                  	</li>
+                  	<li>
+                      <a href="{{action('MemberController@GetCreate')}}">ADD MEMBER</a>
+                  	</li>
+                	<li>
+                      <a href="{{action('MemberController@GetEdit')}}">EDIT TEAM</a>
+                  	</li>
 	                <li>
 	                    <a href="{{action('Auth\AuthController@getLogout')}}">LOGOUT</a>
 	                </li>
@@ -80,12 +89,12 @@
             <span class="hamb-top"></span>
             <span class="hamb-middle"></span>
 			<span class="hamb-bottom"></span>
-      </button>
+  </button>
 <header>
  	<div class="container">
  		<div class="row">
- 			<!-- <img src="images/pixelbug-logo.png">
- --> 			<h3>PIXELBUG</h3>
+ 		  <img src="images/pixelbug-logo.png">
+  			<!--<h3>PIXELBUG</h3>-->
  		
  		</div>
  	</div>
@@ -147,10 +156,10 @@
 	<h2>GALLERY</h2>
 	<p>A glimpse of our work</p>
 	    <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
-		  <div class="gallery-cell" id="festember"><h3>FESTEMBER</h3><button class="photo">VIEW PHOTOS</button></div>
-		  <div class="gallery-cell" id="pragyan"><h3>PRAGYAN</h3><button class="photo">VIEW PHOTOS</button></div>
-		  <div class="gallery-cell" id="nittfest"><h3>NITTFEST</h3><button class="photo">VIEW PHOTOS</button></div>
-		  <div class="gallery-cell" id="sportsfete"><h3>SPORTSFETE</h3><button class="photo">VIEW PHOTOS</button></div>
+		  <div class="gallery-cell" id="festember"><h3>FESTEMBER</h3></div>
+		  <div class="gallery-cell" id="pragyan"><h3>PRAGYAN</h3></div>
+		  <div class="gallery-cell" id="nittfest"><h3>NITTFEST</h3></div>
+		  <div class="gallery-cell" id="sportsfete"><h3>SPORTSFETE</h3></div>
 		  <div class="gallery-cell"></div>
 		</div>
 		<a href="{{action('PhotoController@GetRecentAlbumPhotos')}}"><button class="full-gallery">VIEW FULL GALLERY</button></a>
@@ -219,7 +228,9 @@
 	<div class="container">
 	<h2>WANT TO TALK TO US?</h2>
 	<h3>Have any queries or want to work with us? Say hi to us at this address!</h3>
-	<button>pixelbug@gmail.com</button>
+	 <a href="mailto:pixelbug@gmail.com">
+	 	<button>pixelbug@gmail.com</button>
+	 	</a>
 	</div>
 </section>
 
@@ -231,8 +242,7 @@
 		<div class="col-md-4">
 				<h2>Find us!</h2>
 					<ul class="social-icons icon-circle list-unstyled list-inline"> 
-				   <li> <a href="#"><i class="fa fa-facebook"></i></a></li> 
-				    <li> <a href="#"><i class="fa fa-youtube"></i></a></li>
+				   <li> <a href="https://www.facebook.com/pixelbug.nitt/?fref=ts"><i class="fa fa-facebook"></i></a></li> 
 			       <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
 			        <li> <a href="#"><i class="fa fa-google-plus"></i></a></li> 
 			         <li> <a href="#"><i class="fa fa-instagram"></i></a></li> 

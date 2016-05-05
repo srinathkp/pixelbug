@@ -142,7 +142,16 @@ $.ajaxSetup({
                 <li>
                     <a href="map-index.html">TEAM</a>
                 </li>
-                @if(Auth::check())
+                 @if(Auth::check())
+                  <li>
+                      <a href="{{action('PhotoController@GetAdd')}}">ADD PHOTOS</a>
+                    </li>
+                    <li>
+                      <a href="{{action('MemberController@GetCreate')}}">ADD MEMBER</a>
+                    </li>
+                  <li>
+                      <a href="{{action('MemberController@GetEdit')}}">EDIT TEAM</a>
+                    </li>
                   <li>
                       <a href="{{action('Auth\AuthController@getLogout')}}">LOGOUT</a>
                   </li>
