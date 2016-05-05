@@ -67,4 +67,5 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/editphoto/{id}','PhotoController@PostEdit' );
     //Route::post('/deletephoto/{id}', 'PhotoController@PostDelete');
     Route::get('/deletephoto/{id}','PhotoController@GetDelete'); 
+    Route::get('/refresh','MemberController@refresh');
 });

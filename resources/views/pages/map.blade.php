@@ -189,6 +189,7 @@
 					 		<h3>'+String(member['member_name'])+'</h3>\
 					 		'+String(member['member_dob'])+'\
 					 		<h4>'+String(member['member_email'])+'</h4>\
+					 		<h6>'+String(member['member_address'])+'</h6>\
 					 		<br><a href="'+String(member['member_fb'])+'"><i class="fa fa-facebook"></i></a>\
 					 		&nbsp;&nbsp;&nbsp;<a href="'+String(member["member_photolink"])+'"><i class="fa fa-instagram"></i></a>\
 					 		<p style="text-align:center">'+String(member['member_description'])+'</p>\

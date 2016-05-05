@@ -48,7 +48,7 @@ class MemberController extends Controller
                 $location_json = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address='.urlencode($member->member_address));
                 //return $location_json;
                 $location = json_decode($location_json,true);
-                $member->map_url = 'https://maps.googleapis.com/maps/api/staticmap?center='.$location['results'][0]['geometry']['location']['lat'].' '.$location['results'][0]['geometry']['location']['lng'].'&zoom=12&size=400x500&maptype=roadmap&markers=color:red|'.$location['results'][0]['geometry']['location']['lat'].' '.$location['results'][0]['geometry']['location']['lng'];
+                $member->map_url = 'https://maps.googleapis.com/maps/api/staticmap?center='.$location['results'][0]['geometry']['location']['lat'].' '.$location['results'][0]['geometry']['location']['lng'].'&zoom=8&size=400x500&maptype=roadmap&markers=color:red|'.$location['results'][0]['geometry']['location']['lat'].' '.$location['results'][0]['geometry']['location']['lng'];
                     Member::where('id',$member->id)->update(['member_dplink'=>$member->map_url]);
                 }
                 else $member->map_url = $member->member_dplink;
@@ -97,5 +97,14 @@ class MemberController extends Controller
         //Storage::disk('local')->delete('members/'.$id.'.jpg');      
         Storage::disk('local')->put('members/'.$id.'.jpg', File::get($file));
         return redirect('/editmember');
+    }
+
+    public function refresh(){
+        $members = Member::all();
+        foreach ($members as $member) {
+            Member::where('id',$member->id)->update(['member_dplink'=>'']);
+        }
+     //   Member::update(['member_dplink'=>'']);
+        return 1;
     }
 }
