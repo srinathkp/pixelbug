@@ -413,7 +413,7 @@ section{
 	font-family: "Montserrat", sans-serif;
 	letter-spacing: 5px;
 	color: white;
-	padding-top: 90px;
+	padding-top: 125px;
 	margin-top: 0px;
 }
 
@@ -423,7 +423,9 @@ section{
 	padding-bottom: 0;
 }
 
-
+#gallery a{
+	text-decoration: none;
+}
 
 #gallery h2{
 	font-weight: bold;

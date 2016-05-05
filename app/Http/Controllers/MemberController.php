@@ -40,8 +40,8 @@ class MemberController extends Controller
 
     public function PostMap(){
         $data = [];
-        $members = Member::all();
-        if($members){
+        $members = Member::orderBy('member_rank','ASC')->get();
+                if($members){
             
             foreach ($members as $member) {
                 if(!($member->member_dplink)){

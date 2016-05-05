@@ -131,16 +131,16 @@ $.ajaxSetup({
         <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
             <ul class="nav sidebar-nav">
                 <li>
-                    <a href="index.html">HOME</a>
+                    <a href="{{action('PagesController@index')}}">HOME</a>
                 </li><!-- 
                  <li>
                     <a href="index.html">ABOUT US</a>
                 </li> -->
                 <li>
-                    <a href="gallery.html">GALLERY</a>
+                    <a href="{{action('PhotoController@RecentAlbumPhotos')}}">GALLERY</a>
                 </li>
                 <li>
-                    <a href="map-index.html">TEAM</a>
+                    <a href="{{action('MemberController@GetMap')}}">TEAM</a>
                 </li>
                  @if(Auth::check())
                   <li>

@@ -156,11 +156,26 @@
 	<h2>GALLERY</h2>
 	<p>A glimpse of our work</p>
 	    <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
-		  <div class="gallery-cell" id="festember"><h3>FESTEMBER</h3></div>
-		  <div class="gallery-cell" id="pragyan"><h3>PRAGYAN</h3></div>
-		  <div class="gallery-cell" id="nittfest"><h3>NITTFEST</h3></div>
-		  <div class="gallery-cell" id="sportsfete"><h3>SPORTSFETE</h3></div>
-		  <div class="gallery-cell"></div>
+		 	 <div class="gallery-cell" id="festember">
+		  		<a href="{{action('PhotoController@GetAllAlbumPhotos',['album_name'=>'Festember'])}}">
+		  			<h3>FESTEMBER</h3>
+		  	</a>
+		 </div>
+		 <div class="gallery-cell" id="pragyan">
+		  	<a href="{{action('PhotoController@GetAllAlbumPhotos',['album_name'=>'Pragyan'])}}">
+		  		<h3>PRAGYAN</h3>
+		  	</a>
+		 </div>
+		 <div class="gallery-cell" id="nittfest">
+		  <a href="{{action('PhotoController@GetAllAlbumPhotos',['album_name'=>'Nittfest'])}}">
+		  <h3>NITTFEST</h3>
+		  </a>
+		  </div>
+		  <div class="gallery-cell" id="sportsfete">
+		  <a href="{{action('PhotoController@GetAllAlbumPhotos',['album_name'=>'Sportsfete'])}}">
+		  <h3>SPORTSFETE</h3>
+		  </a>
+		  </div>
 		</div>
 		<a href="{{action('PhotoController@GetRecentAlbumPhotos')}}"><button class="full-gallery">VIEW FULL GALLERY</button></a>
 
@@ -197,7 +212,7 @@
 
 			</h3>
 			<p class="white">
-				Shyam Purushan.	
+				Shyam Purushan	
 			</p>
 			</div>
 			<div class="slider-item quote">
@@ -206,7 +221,7 @@
 
 			</h3>
 			<p class="white">
-				Palaniappan.
+				Palaniappan
 			</p>
 			</div>
 

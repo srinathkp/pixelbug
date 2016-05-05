@@ -221,8 +221,8 @@ $.ajaxSetup({
         /*var id = value['id'];
         document.getElementById('main').innerHTML += '<img src="'+url+'" height="200" width="200"/> <br/>';*/
          
-  $('#gallery .container').append('<div class="col-md-4" style="background-size:cover;background-repeat: no-repeat;background-position:center;" id='+photo[0]['album']+'><h3>'+photo[0]['album']+'</h3><a href="/getalbums_photos/'+photo[0]['album']+'"><button class="photo">VIEW PHOTOS</button></a></div>');
-  $('#'+photo[0]['album']).css("background-image", "url("+url+")"); 
+  $('#gallery .container').append('<div class="col-md-4" style="background-image:'+"url("+url+")"+';background-size:cover;background-repeat: no-repeat;background-position:center;" id='+photo[0]['album']+'><h3>'+photo[0]['album']+'</h3><a href="/getalbums_photos/'+photo[0]['album']+'"><button class="photo">VIEW PHOTOS</button></a></div>');
+    //$('#'+photo[0]['album']).css("background-image", "url("+url+")"); 
        // $("#"+count).attr('src', String(url));
        // $("#"+count).attr('data-fullsrc', String(url));
 

@@ -24,7 +24,7 @@ class PhotoController extends Controller
     {
 
 $file = $request->file('photo');
-
+        if($file){
         $photo = new Photo;
         $photo->photo_name = $request->photo_name;
         $photo->album = $request->album;
@@ -34,9 +34,8 @@ $file = $request->file('photo');
         //Yaaay!!
         Storage::disk('local')->put('photos/'.$photo_id.'.jpg', File::get($file));
         return redirect('/addphoto');
-
-
-
+        }
+        return "no photo added";
 
     }
 
