@@ -95,7 +95,8 @@ class MemberController extends Controller
                         'member_photolink' => $request->photolink,
                         'member_description' => $request->description,
                         ]);
-        //Storage::disk('local')->delete('members/'.$id.'.jpg');      
+        //Storage::disk('local')->delete('members/'.$id.'.jpg');
+        //clearstatcache();      
         Storage::disk('local')->put('members/'.$id.'.jpg', File::get($file));
         return redirect('/editmember');
     }
