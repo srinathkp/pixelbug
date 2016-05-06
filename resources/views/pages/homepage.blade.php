@@ -108,7 +108,7 @@
  		<h2>WHO WE ARE</h2>
  		<div class="col-md-4">
  			<h3>GENESIS</h3>
- 			<p>We are a student run photography club, established in 2012 and inaugrated bt the eminent film director Gautham Vasudev Menon with an aim to inculcate intrest in and a passion for photography among students.</p>
+ 			<p>We are a student run photography club, established in 2012 and inaugurated by the eminent film director Gautham Vasudev Menon with an aim to inculcate interest in and a passion for photography among students.</p>
  		</div>
  		<div class="col-md-4">
  			<h3>TEAM</h3>
@@ -116,7 +116,7 @@
  		</div>
  		<div class="col-md-4">
  			<h3>EXPERIENCE</h3>
- 			<p>Over the years, we have trained ourselves through every chance that came by. We have tajen to the streets for many photowalks, promoted tourism across South India. In addition to this, we also carried out various studio shoots.</p>
+ 			<p>Over the years, we have trained ourselves through every chance that came by. We have taken to the streets for many photowalks, promoted tourism across South India. In addition to this, we also carried out various studio shoots.</p>
  		</div> 		
  	</div>
  </div>
