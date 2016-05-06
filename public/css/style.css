@@ -762,10 +762,12 @@ html { height: 100%;}
 
 #sidebar-wrapper::-webkit-scrollbar {
   display: none;
+
 }
 
 #wrapper.toggled #sidebar-wrapper {
     width: 220px;
+      background-color: #232323;
 }
 
 #page-content-wrapper {
