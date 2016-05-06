@@ -101,10 +101,6 @@ $.ajaxSetup({
     padding-top: 20px;
    }
 
-   .sidebar-nav li a{
-    color: white;
-   }
-
   </style>
 
 

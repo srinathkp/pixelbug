@@ -35,10 +35,6 @@
 		padding-top: 55px;
 		padding-bottom: 40px;
 	}
-.sidebar-nav li a{
-  color: white;
-	
-}
 </style>
 </head>
 <body>

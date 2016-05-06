@@ -38,10 +38,6 @@ header('Pragma: no-cache');
 	footer{
 		background-color:  #232323;
 	}
-
-	.sidebar-nav li a{
-		color: white;
-	}
 </style>
 
 </head>
