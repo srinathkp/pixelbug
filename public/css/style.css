@@ -675,6 +675,7 @@ footer p{
 }
 
 .the-team h3{
+	text-align: center;
 	font-weight: bold;
 	letter-spacing: 5px;
 	padding-top: 20px;
@@ -697,7 +698,7 @@ footer p{
 
 .about-them h3{
 	text-align: center;
-	text-align: left;
+	
 
 }
 
