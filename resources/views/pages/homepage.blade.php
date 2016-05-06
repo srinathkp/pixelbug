@@ -116,7 +116,7 @@
  		</div>
  		<div class="col-md-4">
  			<h3>EXPERIENCE</h3>
- 			<p>Over the years, we have trained ourselves through every chance that came by. We have taken to the streets for many photowalks, promoted tourism across South India. In addition to this, we also carried out various studio shoots.</p>
+ 			<p>Over the years, we have trained ourselves through every chance that came by. We have takgit en to the streets for many photowalks, promoted tourism across South India. In addition to this, we also carried out various studio shoots.</p>
  		</div> 		
  	</div>
  </div>
