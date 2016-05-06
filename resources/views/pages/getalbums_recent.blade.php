@@ -144,21 +144,16 @@
  -->
 
 <footer>
-	<div class="container">
-		<div class="col-md-8">
-			
-		</div>
-		<div class="col-md-4">
-				<h2>Find us!</h2>
-					<ul class="social-icons icon-circle list-unstyled list-inline"> 
-				   <li> <a href="#"><i class="fa fa-facebook"></i></a></li> 
-				    <li> <a href="#"><i class="fa fa-youtube"></i></a></li>
-			       <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-			        <li> <a href="#"><i class="fa fa-google-plus"></i></a></li> 
-			         <li> <a href="#"><i class="fa fa-instagram"></i></a></li> 
-	         	</ul>
-			</div>
-	</div>
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2">
+        
+          <ul class="social-icons icon-circle list-unstyled list-inline"> 
+           <li> <a href="https://www.facebook.com/pixelbug.nitt/?fref=ts"><i class="fa fa-facebook"></i></a></li> 
+              <li> <a href="https://plus.google.com/104949925186685208349/posts"><i class="fa fa-google-plus"></i></a></li> 
+               <li> <a href="https://www.instagram.com/pixelbug.nitt/"><i class="fa fa-instagram"></i></a></li> 
+            </ul>
+      </div>
+  </div>
 </footer>
 
 </div>
