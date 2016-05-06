@@ -35,9 +35,11 @@
 		padding-top: 55px;
 		padding-bottom: 40px;
 	}
-
-	</style>
-
+.sidebar-nav li a{
+  color: white;
+	
+}
+</style>
 </head>
 <body>
 
@@ -54,31 +56,6 @@
  
 </div>
 
-<!-- <nav class="navbar navbar-default" data-spy="affix" data-offset-top="786">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#"><img src="images/pixelbug-logo.png" width="75"></a>
-    </div> 
- 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#us">Home<span class="sr-only">(current)</span></a></li>
-        <li><a href="#who">About us</a></li>
-      	<li><a href="#what">Work</a></li>
-      	<li><a href="#gallery">Gallery</a></li>
-      	<li><a href="#testimonial">Testimonials</a></li>
-      	<li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav> -->
-
 <div id="wrapper">
  <div class="overlay"></div>
  <!-- Sidebar -->
@@ -86,10 +63,7 @@
             <ul class="nav sidebar-nav">
                 <li>
                     <a href="{{action('PagesController@index')}}">HOME</a>
-                </li><!-- 
-                 <li>
-                    <a href="index.html">ABOUT US</a>
-                </li> -->
+                </li>
                 <li>
                     <a href="{{action('PhotoController@RecentAlbumPhotos')}}">GALLERY</a>
                 </li>
@@ -128,20 +102,6 @@
 </section>
 
 
-<!-- 
-<section id="gallery">
-	<h2>GALLERY</h2>
-	<p>A glimpse of our work</p>
-	    <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
-		  <div class="gallery-cell" id="festember"><h3>FESTEMBER</h3><button class="photo">VIEW PHOTOS</button></div>
-		  <div class="gallery-cell" id="pragyan"><h3>PRAGYAN</h3><button class="photo">VIEW PHOTOS</button></div>
-		  <div class="gallery-cell" id="nittfest"><h3>NITTFEST</h3><button class="photo">VIEW PHOTOS</button></div>
-		  <div class="gallery-cell" id="sportsfete"><h3>SPORTSFETE</h3><button class="photo">VIEW PHOTOS</button></div>
-		  <div class="gallery-cell"></div>
-	</div>
-
-</section>
- -->
 
 <footer>
 	<div class="container">
