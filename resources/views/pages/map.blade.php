@@ -67,7 +67,7 @@ header('Pragma: no-cache');
         <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
             <ul class="nav sidebar-nav">
                 <li>
-                    <a href="">HOME</a>
+                    <a href="{{action('PagesController@index')}}">HOME</a>
                 </li><!-- 
                  <li>
                     <a href="index.html">ABOUT US</a>
