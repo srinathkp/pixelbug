@@ -184,17 +184,15 @@
 <section id="team">
 	<div class="container">
 		<h2>MEET THE TEAM</h2>
-		<div class="col-md-4">
-			<div class="team-pic"></div>
-			<h3>JOHN DOE</h3>
+		<div class="col-md-12">
+			<div class="col-md-6">
+			<div class="team-pic" id="saatwik"></div>
+			<h3>SAATWIK</h3>
 		</div>
-		<div class="col-md-4">
-			<div class="team-pic"></div>
-			<h3>JANET DOE</h3>
+		<div class="col-md-6">
+			<div class="team-pic" id="pradeep"></div>
+			<h3>PRADEEP</h3>
 		</div>
-		<div class="col-md-4">
-			<div class="team-pic"></div>
-			<h3>JANE DOE</h3>
 		</div>
 	<a href="{{action('MemberController@GetMap')}}">
 			<button>VIEW ALL MEMBERS</button>
@@ -251,14 +249,11 @@
 
 <footer>
 	<div class="container">
-		<div class="col-md-8">
-			
-		</div>
-		<div class="col-md-4">
-				<h2>Find us!</h2>
+		<div class="col-md-8 col-md-offset-2">
+				<h3>You don't take a photograph, you make it.</h3>
+				<p>ANSEL ADAMS</p>
 					<ul class="social-icons icon-circle list-unstyled list-inline"> 
 				   <li> <a href="https://www.facebook.com/pixelbug.nitt/?fref=ts"><i class="fa fa-facebook"></i></a></li> 
-			       <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
 			        <li> <a href="#"><i class="fa fa-google-plus"></i></a></li> 
 			         <li> <a href="#"><i class="fa fa-instagram"></i></a></li> 
 	         	</ul>
