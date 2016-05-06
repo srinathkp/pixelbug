@@ -253,9 +253,9 @@
 				<h3>You don't take a photograph, you make it.</h3>
 				<p>ANSEL ADAMS</p>
 					<ul class="social-icons icon-circle list-unstyled list-inline"> 
-				   <li> <a href="https://www.facebook.com/pixelbug.nitt/?fref=ts"><i class="fa fa-facebook"></i></a></li> 
-			        <li> <a href="#"><i class="fa fa-google-plus"></i></a></li> 
-			         <li> <a href="#"><i class="fa fa-instagram"></i></a></li> 
+				   <li> <a href="https://www.facebook.com/pixelbug.nitt/?fref=ts" target="blank"><i class="fa fa-facebook"></i></a></li> 
+			        <li> <a href="https://plus.google.com/104949925186685208349/posts" target="blank"><i class="fa fa-google-plus"></i></a></li> 
+			         <li> <a href="https://www.instagram.com/pixelbug.nitt/" target="blank"><i class="fa fa-instagram"></i></a></li> 
 	         	</ul>
 			</div>
 	</div>
