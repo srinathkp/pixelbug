@@ -93,7 +93,7 @@
 <header>
  	<div class="container">
  		<div class="row">
- 		  <img src="images/pixelbug-logo.png">
+ 		  <img src="images/pixelbug-logo.png" class="img-responsive">
   			<!--<h3>PIXELBUG</h3>-->
  		
  		</div>
