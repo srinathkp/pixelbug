@@ -185,13 +185,20 @@
 	<div class="container">
 		<h2>MEET THE TEAM</h2>
 		<div class="col-md-12">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			<div class="team-pic" id="saatwik"></div>
-			<h3>SAATWIK</h3>
+			<h3>SAATHWIK</h3>
+			<h5>President</h5>
 		</div>
-		<div class="col-md-6">
+		<div class="col-md-4">
 			<div class="team-pic" id="pradeep"></div>
 			<h3>PRADEEP</h3>
+			<h5>Vice-president</h5>
+		</div>
+		<div class="col-md-4">
+			<div class="team-pic" id="saravanan"></div>
+			<h3>Dr.S.SARAVANAN</h3>
+			<h5>Faculty advisor</h5>
 		</div>
 		</div>
 	<a href="{{action('MemberController@GetMap')}}">
@@ -241,8 +248,8 @@
 	<div class="container">
 	<h2>WANT TO TALK TO US?</h2>
 	<h3>Have any queries or want to work with us? Say hi to us at this address!</h3>
-	 <a href="mailto:pixelbug@gmail.com">
-	 	<button>pixelbug@gmail.com</button>
+	 <a href="mailto:pixelbug.nittrichy@gmail.com">
+	 	<button>pixelbug.nitttrichy@gmail.com</button>
 	 	</a>
 	</div>
 </section>

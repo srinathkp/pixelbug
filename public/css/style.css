@@ -326,8 +326,18 @@ section{
 	font-weight: bold;
 	font-family: "Montserrat", sans-serif;
 	padding-top: 40px;
-	padding-bottom: 30px;
+	padding-bottom: 25px;
 	font-size: 20px;
+	letter-spacing: 6px;
+
+}
+
+#team h5{
+	font-weight: bold;
+	font-family: "Montserrat", sans-serif;
+	padding-top: 5px;
+	padding-bottom: 30px;
+	font-size: 15px;
 	letter-spacing: 6px;
 
 }
@@ -467,6 +477,11 @@ section{
 
 #pradeep{
 	background-image: url(../images/pradeep.jpg);
+	background-size: cover;
+}
+
+#saravanan{
+	background-image: url(../images/saravanan.jpg);
 	background-size: cover;
 }
 
