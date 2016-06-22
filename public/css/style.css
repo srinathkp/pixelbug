@@ -469,14 +469,24 @@ section{
 	width: 100%;
 }
 
-#saatwik{
-	background-image: url(../images/saatwik.jpg);
+#venkat{
+	background-image: url(../images/venkat.jpg);
 	background-size: cover;
 }
 
 
-#pradeep{
-	background-image: url(../images/pradeep.jpg);
+#apuroop{
+	background-image: url(../images/apuroop.jpg);
+	background-size: cover;
+}
+
+#lakshmi{
+	background-image: url(../images/lakshmi.jpg);
+	background-size: cover;
+}
+
+#lavanya{
+	background-image: url(../images/lavanya.jpg);
 	background-size: cover;
 }
 
