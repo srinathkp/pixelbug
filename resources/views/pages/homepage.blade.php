@@ -249,7 +249,7 @@
 	<h2>WANT TO TALK TO US?</h2>
 	<h3>Have any queries or want to work with us? Say hi to us at this address!</h3>
 	 <a href="mailto:pixelbug.nittrichy@gmail.com">
-	 	<button>pixelbug.nitttrichy@gmail.com</button>
+	 	<button>pixelbug.nittrichy@gmail.com</button>
 	 	</a>
 	</div>
 </section>
