@@ -184,23 +184,38 @@
 <section id="team">
 	<div class="container">
 		<h2>MEET THE TEAM</h2>
+	<div class="row">
 		<div class="col-md-12">
 			<div class="col-md-4">
-			<div class="team-pic" id="saatwik"></div>
-			<h3>SAATHWIK</h3>
-			<h5>President</h5>
+				<div class="team-pic" id="venkat"></div>
+				<h3>Venkata Krisshna</h3>
+				<h5>President</h5>
+			</div>
+			<div class="col-md-4">
+				<div class="team-pic" id="apuroop"></div>
+				<h3>Apuroop Mandala</h3>
+				<h5>Vice-president</h5>
+			</div>
+			<div class="col-md-4">
+				<div class="team-pic" id="lakshmi"></div>
+				<h3>Lakshmi K Ajayan</h3>
+				<h5>Treasurer</h5>
+			</div>
 		</div>
-		<div class="col-md-4">
-			<div class="team-pic" id="pradeep"></div>
-			<h3>PRADEEP</h3>
-			<h5>Vice-president</h5>
-		</div>
-		<div class="col-md-4">
-			<div class="team-pic" id="saravanan"></div>
-			<h3>Dr.S.SARAVANAN</h3>
-			<h5>Faculty advisor</h5>
-		</div>
-		</div>
+	</div>
+	<div class="row">
+	<div class="col-md-12">
+			<div class="col-md-6">
+				<div class="team-pic" id="lavanya"></div>
+				<h3>Lavanya Kumaran</h3>
+				<h5>General Secretary</h5>
+			</div>
+			<div class="col-md-6">
+				<div class="team-pic" id="saravanan"></div>
+				<h3>Dr.S.Saravanan</h3>
+				<h5>Faculty Advisor</h5>
+			</div>
+	</div>
 	<a href="{{action('MemberController@GetMap')}}">
 			<button>VIEW ALL MEMBERS</button>
 	</a>
