@@ -9,6 +9,9 @@ header("Pragma: no-cache");
 <html>
 <head>
 	<meta charset="UTF-8">
+	<meta name="description" content="Pixelbug">
+	<meta name="keywords" content="pixelbug,pixelbug website,pixelbug photos,pixelbug members, vijayprasanna13">
+	<meta name="author" content="G Vijay Prasanna, MajithD2, Srinath">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Pixelbug</title>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -197,7 +200,7 @@ header("Pragma: no-cache");
 					 	</div>\
 					 </div>\
 					<br/><hr style="border-width:5px"/>');
-
+			 	//01100111 01110110 01110000 00001101 00001010 00001101 00001010	
 			 	console.log(member);
 			 });
 			},

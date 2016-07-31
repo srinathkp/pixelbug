@@ -2,6 +2,9 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<meta name="description" content="Pixelbug">
+	<meta name="keywords" content="pixelbug,pixelbug website,pixelbug photos,pixelbug members">
+	<meta name="author" content="G Vijay Prasanna, MajithD2, Srinath">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Pixelbug</title>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">

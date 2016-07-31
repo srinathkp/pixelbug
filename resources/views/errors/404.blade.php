@@ -20,6 +20,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 	<!--Style Sheet-->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -57,19 +58,18 @@
     
 <header>
  	<div class="container">
- 		<div class="row">
+ 		<div class="row" style="margin-top:-5%;opacity:0.6">
  		  <img src="images/404.png" class="img-responsive">
   			<!--<h3>PIXELBUG</h3>-->
- 			<h1 style="text-align:center;font-family:Oxygen;color:lightgrey">
- 				The page does not exist
+ 			<h1 style="text-align:center;font-family:Oswald;color:lightgrey;opacity:0.5">
+ 				Looks like you are on the wrong page.
  			</h1>	
  		</div>
  	</div>
+ 	<div style="opacity:0.2">
+ 	No photos to fill this page
+	</div>
  </header>
-
-
-
-
 
 </div>
 </div>
