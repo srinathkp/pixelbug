@@ -280,12 +280,21 @@
 					<ul class="social-icons icon-circle list-unstyled list-inline"> 
 				   <li> <a href="https://www.facebook.com/pixelbug.nitt/?fref=ts" target="blank"><i class="fa fa-facebook"></i></a></li> 
 			        <li> <a href="https://plus.google.com/104949925186685208349/posts" target="blank"><i class="fa fa-google-plus"></i></a></li> 
-			         <li> <a href="https://www.instagram.com/pixelbug.nitt/" target="blank"><i class="fa fa-instagram"></i></a></li> 
+			         <li> <a href="https://www.instagram.com/pixelbug.nitt/" target="blank"><i class="fa fa-instagram"></i></a></li>
+
 	         	</ul>
 			</div>
 	</div>
-</footer>
-
+	<br/><br/><br/>
+	<div style="text-align:center;">	
+	<a href="http://spider.nitt.edu" id="spider_link">
+	<img src="logo.jpg" style="border-radius:50%;border-margin:5px solid white" width="50" height="50">
+	</a>
+	<br/>
+	<span style="color:white;opacity:0.8;font-family: 'Montserrat';">Spider, NITT</span>
+	</div>
+	<br/>
+	</footer>
 </div>
 </div>
 

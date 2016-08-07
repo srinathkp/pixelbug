@@ -3,6 +3,10 @@ body{
 	color: #747474;
 }
 
+a:link    {color:none; background-color:transparent; text-decoration:none}
+a:visited {color:none; background-color:transparent; text-decoration:none}
+a:hover   {color:none; background-color:transparent; text-decoration:none}
+a:active  {color:none; background-color:transparent; text-decoration:none}
 
 #loading{
 	background-color: #232323;
